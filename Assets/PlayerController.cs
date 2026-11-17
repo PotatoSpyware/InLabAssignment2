@@ -53,9 +53,9 @@ public class PlayerController : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (attack)
+        if (other.gameObject.tag == "Rat")
         {
-            if (other.gameObject.tag == "Rat")
+            if (attack)
             {
                 Destroy(other.gameObject);
             }
